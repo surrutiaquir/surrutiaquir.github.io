@@ -23,7 +23,7 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-hydejack
+theme: minimal
 plugins:
   - jekyll-feed
 
@@ -39,10 +39,3 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 
-compress_html:
-  comments:  ["<!-- ", " -->"]
-  clippings: all
-  endings:   all
-
-sass:
-  style:     compressed
