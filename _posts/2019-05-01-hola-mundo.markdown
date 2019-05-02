@@ -10,3 +10,5 @@ Aquí va el contenido del post.
 for open('file') as f:
   f.read()
 ```
+
+Incluso muestra código!!
