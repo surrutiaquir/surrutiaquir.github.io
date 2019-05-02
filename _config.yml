@@ -38,3 +38,11 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+compress_html:
+  comments:  ["<!-- ", " -->"]
+  clippings: all
+  endings:   all
+
+sass:
+  style:     compressed
