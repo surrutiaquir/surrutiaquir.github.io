@@ -6,7 +6,7 @@ description: Welcome to my personal website
 
 # Teaching material
 
-<br>
+![Teaching](./teaching-wordle.png)
 
 ## Pontificia Universidad Católica de Chile (PUC)
 
