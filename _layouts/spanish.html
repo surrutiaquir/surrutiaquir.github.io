@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<style>
+.material-icons {vertical-align:-14%}
+</style>
   <head>
 
     {% if site.google_analytics %}
@@ -27,7 +33,7 @@
       <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
       <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
       {% if site.show_downloads %}
-        <a href="./" class="menu" style="padding: 0;"> <img src="/home.png" height="50px" style="vertical-align: middle;"> </a>
+        <a href="./" class="menu"> <i class="material-icons w3-large"> home</i> Inicio </a>
         <a href="./main-spanish.html" class="menu"> Acerca de Mí </a>
         <a href="./research-spanish.html" class="menu"> Investigación </a>
         <a href="./teaching-spanish.html" class="menu"> Material docente </a>
