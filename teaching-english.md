@@ -45,7 +45,8 @@ description: Welcome to my personal website
 
 ### Physics
 
-| Topic                     | UMass ID | Available material | Language |
-|:--------------------------|:---------|:-------------------|:---------|
-| Classical Mechanics       | P601     | [Recitation lectures](https://www.dropbox.com/sh/i0m1ifbn2v43yxg/AACN_ZsfqW_PlGzXXc8Lvmbpa?dl=0)        | EN |
-| Classical Electrodynamics | P606     | [Recitation lectures](https://www.dropbox.com/sh/p2etlpea3kfl8iw/AABgyEY6JWIslZW7ozrFI_EDa?dl=0)        | EN |
+| Topic                           | UMass ID | Available material | Language |
+|:--------------------------------|:---------|:-------------------|:---------|
+| Classical Mechanics             | P601     | [Recitation lectures](https://www.dropbox.com/sh/i0m1ifbn2v43yxg/AACN_ZsfqW_PlGzXXc8Lvmbpa?dl=0)        | EN |
+| Classical Electrodynamics       | P606     | [Recitation lectures](https://www.dropbox.com/sh/p2etlpea3kfl8iw/AABgyEY6JWIslZW7ozrFI_EDa?dl=0)        | EN |
+| Methods of Mathematical Physics | P605     | [Discussion sessions](https://www.dropbox.com/sh/cn3nhme2623gu7e/AABvpKS0PmW6PzBkA2ss0h7Ea?dl=0)        | EN |
