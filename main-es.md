@@ -1,5 +1,5 @@
 ---
-layout: spanish
+layout: espanol
 title: Sebastián Urrutia-Quiroga
 description: Bienvenido a mi sitio web personal
 ---
