@@ -14,4 +14,4 @@ I did my undergrad at the [School of Engineering](https://www.ing.uc.cl/) in the
 
 Currently, I'm a Physics Ph.D. student at the [Physics Department](http://www.physics.umass.edu/) in the University of Massachusetts Amherst, as a member of the [Amherst Center for Fundamental Interactions](https://www.physics.umass.edu/acfi/).
 
-You can find my CV _(Updated: Jan 2020)_ [**here**](CV.pdf).
+You can find my CV _(Updated: Oct 2020)_ [**here**](CV.pdf).
