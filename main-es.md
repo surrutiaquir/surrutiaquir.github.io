@@ -14,4 +14,4 @@ Realicé mis estudios de pregrado en la [Escuela de Ingeniería](https://www.ing
 
 Actualmente soy Ph.D. (c) en Física en el [Departamento de Física](http://www.physics.umass.edu/) de la Universidad de Massachusetts Amherst, como parte del [_Amherst Center for Fundamental Interactions_](https://www.physics.umass.edu/acfi/).
 
-Puedes encontrar mi CV _(Actualizado: Oct 2020)_ [**aquí**](CV.pdf).
+Puedes encontrar mi CV _(Actualizado: Oct 2021)_ [**aquí**](CV.pdf).
