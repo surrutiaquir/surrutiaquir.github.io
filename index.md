@@ -14,4 +14,4 @@ _"Just as the constant increase of entropy is the basic law of the universe, so 
 
 
 #### Información de contacto | Contact information
-``` surrutiaquir at gmail.com ```
+<img src="mail.png" alt="" width="25%">
