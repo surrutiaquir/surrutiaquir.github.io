@@ -26,6 +26,9 @@ show_downloads: true
 markdown: kramdown
 theme: jekyll-theme-cayman
 plugins:
+##  - jekyll-remote-theme
+  - jekyll-seo-tag
+##remote_theme: heiswayi/the-plain
 #  - jekyll-seo-tag
 
 # Exclude from processing.

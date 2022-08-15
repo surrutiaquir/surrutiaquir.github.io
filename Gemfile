@@ -32,4 +32,5 @@ gem "wdm", "~> 0.1.0" if Gem.win_platform?
 gem "kramdown", ">= 1.14.0"
 
 # New theme
+##gem "jekyll-remote-theme"
 gem "jekyll-theme-cayman"
