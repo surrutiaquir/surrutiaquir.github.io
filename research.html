@@ -1,0 +1,202 @@
+---
+layout: default
+title : Research
+navbar_title: Research
+body_attr: >-
+    data-spy="scroll" data-target="#navbar-year" data-offset="100"
+---
+
+<style>
+    .spacing {
+    margin-bottom: 50px;
+    }
+    .spacing-top {
+    margin-top: 50px;
+    }
+    .spacing-tb {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    }
+    .tight-spacing {
+    line-height: 0.5;  /* Adjust this value to increase/decrease spacing */
+    }
+    .subtitle {
+    font-size: 1.8rem;      /* Adjust the size of the subtitle */
+    color: #666666;         /* Gray text color */
+    font-weight: 500;       /* Lighter weight for subtitle */
+    margin-bottom: 1.5rem;  /* Space below subtitle */
+    text-align: left;     /* Center the subtitle (optional) */
+    }
+</style>
+
+<style>
+    ul.hyphen-list {
+      list-style-type: none;  /* Remove default bullet points */
+      padding-left: 0;        /* Remove default padding */
+    }
+    ul.hyphen-list li::before {
+      content: "-";           /* Add the hyphen before each list item */
+      padding-right: 8px;     /* Space between the hyphen and text */
+    }
+</style>
+
+<style>
+    /* Make sure the container takes the full height */
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    /* Center the image */
+    .image-container {
+        margin-top: auto;  /* Pushes the image to the bottom */
+        text-align: center; /* Centers the image horizontally */
+    }
+
+    .image-container img {
+        width: 75%; /* Adjust the width as needed */
+        max-width: 800px; /* Maximum width for the image */
+        height: auto; /* Maintains the aspect ratio */
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+</style>
+
+<script type="text/javascript">
+    window.MathJax = {
+    tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+    },
+    options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+    };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+<div class="container mt-5">
+    <h1>{{ page.title }}</h1>
+    <p class="spacing-top">
+        I am a theoretical physicist working at the interface of nuclear and particle physics. My current research interests are mostly focused on fundamental
+        symmetries and neutrino physics, with a particular emphasis on the following topics:
+        <ul class="hyphen-list spacing">
+            <li>Neutrinoless double beta decay and effective field theories</li>
+            <li>Neutrino mass models and the Dirac vs. Majorana puzzle</li>
+            <li>Leptogenesis and dark matter</li>
+            <li>Collider phenomenology</li>
+        </ul>
+    </p>
+    <h2 class="subtitle"> List of publications </h2>
+    <div id="publications-list">
+        <p>Loading publications...</p>
+    </div>
+    <!-- Image at the bottom -->
+    <div class="image-container">
+        <img src="./assets/images/etc/physics-wordle.png" alt="Your Image">
+    </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const apiUrl = "https://inspirehep.net/api/literature?sort=mostrecent&size=100&q=a%20S.Urrutia.Quiroga.1";
+
+    console.log("Starting API fetch...");
+
+    fetch(apiUrl)
+        .then(response => {
+            console.log("Fetch response received:", response);
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log("Parsed JSON data:", data);
+
+            // Check if there are hits and ensure 'hits' exists and has data
+            if (!data.hits || data.hits.hits.length === 0) {
+                console.error("No data found.");
+                document.getElementById("publications-list").innerHTML = "<p>No publications found.</p>";
+                return;
+            }
+
+            let papers = data.hits.hits;
+
+            // // Sort papers by year (descending order)
+            // papers.sort((a, b) => {
+            //     yearA = new Date(a.created).getFullYear();
+            //     yearB = new Date(b.created).getFullYear();
+            //     return yearB - yearA;  // Sort in descending order (newest first)
+            // });
+
+            let output = "<ul>";
+
+            // Loop through each paper and display relevant information
+            papers.forEach(paper => {
+                let paperTitle = (paper.metadata && paper.metadata.titles && paper.metadata.titles[0].title) 
+                                ? paper.metadata.titles[0].title 
+                                : "Title unavailable";  // Fallback for missing title
+
+                let authors = (paper.metadata && paper.metadata.authors && paper.metadata.authors.length > 0)
+                                ? paper.metadata.authors.map(author => `${author.first_name} ${author.last_name}`).join(", ")
+                                : "Authors unavailable";  // Fallback for missing authors
+                
+                let journal = (paper.metadata.publication_info && paper.metadata.publication_info[0].journal_title)
+                                ? paper.metadata.publication_info[0].journal_title 
+                                : "";  // Fallback for missing journal
+
+                let volume = (paper.metadata.publication_info && paper.metadata.publication_info[0].journal_volume)
+                                ? paper.metadata.publication_info[0].journal_volume 
+                                : "";  // Fallback for missing volume
+
+                let issue = (paper.metadata.publication_info && paper.metadata.publication_info[0].journal_issue)
+                            ? paper.metadata.publication_info[0].journal_issue + ", "
+                            : "";  // Fallback for missing issue
+
+                let artid = (paper.metadata.publication_info && paper.metadata.publication_info[0].artid)
+                            ? paper.metadata.publication_info[0].artid 
+                            : "";  // Fallback for missing artid
+
+                let year = (paper.metadata.publication_info && paper.metadata.publication_info[0].year)
+                            ? paper.metadata.publication_info[0].year 
+                            : "";  // Fallback for missing year
+
+                let authors__vs__author = (paper.metadata.authors.length > 1) ? "Authors: " : "Author: ";
+
+                let journal_info = (journal == "") ? "" : `Published in: <i>${journal}</i> ${volume} (${year}) ${issue}${artid}`;
+
+                let separator = (journal == "") ? "" : " | ";
+
+                let arxivId = (paper.metadata.arxiv_eprints && paper.metadata.arxiv_eprints.length > 0)
+                                ? "e-Print: " + paper.metadata.arxiv_eprints[0].value + " [" + paper.metadata.arxiv_eprints[0].categories[0] + "]"
+                                : "";  // Fallback for missing arXiv ID 
+
+                console.log("Processing paper:", paper);  // Log each paper for debugging
+                output += `<li class="mb-4 tight-spacing">
+                            <h5><a href="https://inspirehep.net/literature/${paper.id}" target="_blank">${paperTitle}</a></h5>
+                            <p><strong>${authors__vs__author}</strong> ${authors}</p>
+                            <p>${journal_info} ${separator} ${arxivId}</p>
+                            <p><strong style="color: gray; font-size: smaller;">Citations:</strong>
+                                <span style="color: gray; font-size: smaller;">${paper.metadata.citation_count || 0}</span>
+                            </p>
+                            </li>`;
+            });
+
+            output += "</ul>";
+            document.getElementById("publications-list").innerHTML = output;
+
+            // Re-render MathJax after dynamic content is inserted
+            MathJax.typesetPromise().then(() => {
+                console.log("MathJax rendering complete.");
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+            document.getElementById("publications-list").innerHTML = "<p>Error loading publications. Please try again later.</p>";
+        });
+});
+</script>
