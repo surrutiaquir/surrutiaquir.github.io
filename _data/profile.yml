@@ -1,0 +1,82 @@
+primary_name: "Sebastián <strong>Urrutia Quiroga</strong>"
+secondary_name: 
+navbar_name: "Sebastián <strong>Urrutia Quiroga</strong>"
+navbar_name_light: "Sebastián Urrutia Quiroga"
+
+positions:
+- logo: /assets/images/badges/int.png  # Logo is optional
+  name: Postdoctoral Scholar, Institute for Nuclear Theory, University of Washington
+- logo: /assets/images/badges/nu.png
+  name: Visiting Scholar, Northwestern University
+
+
+email: "surrutiaquir@gmail.com"
+cv_link: https://www.dropbox.com/scl/fi/2leukfbq4fipkkre8oty2/modern_cv.pdf?rlkey=uv1bldz4orpq0szutzit44fgh&dl=0
+# gscholar: your_google_scholar_id
+github: surrutiaquir
+inspire: S.Urrutia.Quiroga.1
+# twitter: your_twitter_id
+# wechat_qrcode: /assets/images/etc/wechat.jpg
+# wechat_prompt: >-
+#   Please tell me your <strong>name</strong> and <strong>affiliation</strong> (current or past) when adding my wechat. Thanks!
+linkedin: surrutiaquir
+# orcid: 0000-0000-0000-0000
+
+short_bio: >-
+  <p>
+  I am Sebastián Urrutia Quiroga, a Chilean 🇨🇱 scientist engaged with the diffusion of scientific knowledge, particularly physics and math.
+  </p>
+  <p>
+  I did my undergrad at the School of Engineering at the Pontificia Universidad Catolica de Chile (Pontifical Catholic University of Chile), 
+  where I majored in electrical engineering. Then, I got an M.Sc. in Particle Physics at the Physics Institute at the same university.
+  </p>
+  <p>
+  In 2017, I moved to the US to pursue my Ph.D. in Physics at the University of Massachusetts Amherst, where I was a member of the Amherst Center 
+  for Fundamental Interactions. My <a href="https://inspirehep.net/literature/2724079" target="_blank">dissertation</a> focused on TeV-scale lepton number violation, exploring the interface between particle and nuclear physics.
+  </p>
+  <p>
+  After graduating in 2023, I got a postdoc position at the <a href="https://www.int.washington.edu/" target="_blank">Institute for Nuclear Theory</a> and a visiting scholar appointment at Northwestern University, where 
+  I continued my research in fundamental symmetries and neutrinos.
+  </p>
+
+portrait_url: /assets/images/photos/surrutiaquir.png
+portrait_caption: >-
+  Photo taken in La Jolla, CA.
+
+education:
+- name: University of Massachusetts Amherst
+  logo: /assets/images/badges/umass.png
+  position: Ph.D. in Physics
+  date: Sep. 2023
+
+- name: Pontificia Universidad Católica de Chile
+  logo: /assets/images/badges/puc.png
+  position: M.Sc. in Physics
+  date: Dec. 2015
+
+- name: Pontificia Universidad Católica de Chile
+  logo: /assets/images/badges/puc.png
+  position: Electrical Engineer (professional degree)
+  date: Dec. 2015
+
+- name: Pontificia Universidad Católica de Chile
+  logo: /assets/images/badges/puc.png
+  position: Bachelor of Engineering Sciences
+  date: Dec. 2013
+
+
+
+# experience:
+# - name: Peking University
+#   logo: /assets/images/badges/PKU_red.png
+#   position: Research Intern
+#   date: Sep. 2019 - Jul. 2021
+
+
+# awards:
+# - name: Award Name 2
+#   date: 2024
+# - name: Award Name 1 
+#   date: 2021
+# - name: A quick brown fox jumps over the lazy dog and runs away award
+#   date: 2021
